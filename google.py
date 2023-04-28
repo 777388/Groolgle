@@ -18,11 +18,8 @@ def Main():
     parser.add_option("-E", "--g", dest='g', help="group:", action='store')
     parser.add_option("-F", "--is", dest='iss', help="insubject:", action='store')
     parser.add_option("-G", "--m", dest='m', help="msgid:", action='store')
-    parser.add_option("-H", "--gov", dest = 'gov', help="site:\[gov|mil\]", action='store')
     parser.add_option("-I", "--c", dest='cac', help="cache:", action='store')
-    parser.add_option("-J", "--s3", dest='s3', help="site:***.amazonaws.com", action='store')
-    parser.add_option("-K", "--dr", dest='dr', help="site:drive.google.com", action='store')
-    parser.add_option("-L", "--ind", dest='ind', help="intitle:\"index of\"", action='store')
+    parser.add_option("-L", "--ind", dest='ind', help="intitle:\"index of\"", action='append')
     parser.add_option("-M", "--sea", dest="sea", help="regular search", action='store', default=sys.argv[-1])
     (options, args) = parser.parse_args()
     if options.sea == None:
